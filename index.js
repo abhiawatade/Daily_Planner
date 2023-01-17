@@ -8,7 +8,6 @@ const PORT = 3000;
 const RedisClient = require("./config/connectRedis");
 const scheduleRoutes = require("./routes/scheduleRoutes");
 require("./services/scheduler");
-require("./services/webPush");
 
 //middlewares
 app.use(express.static(path.join(__dirname, "client")));

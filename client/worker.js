@@ -1,6 +1,7 @@
-console.log("Service worker loaded...");
+self.addEventListener("push", function (event) {
+  const data = event.data.JSON();
 
-self.addEventListener(push, function (e) {
-  const data = e.data.JSON();
+  // const payload = event.data.text();
+  // const data = JSON.parse(payload);
   self.registration.showNotification(data.title, { body: data.body });
 });
